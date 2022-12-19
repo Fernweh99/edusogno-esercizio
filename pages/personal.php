@@ -1,7 +1,7 @@
 <?php
   session_start();
  if (!$_SESSION['log']) {
-   header ('Location: ../pages/login.php');
+   header ('Location: login.php');
  }
 ?>
 <!DOCTYPE html>
@@ -21,5 +21,8 @@
   include '../includes/header.php';
   ?>
     <h2 class="title-page">Ciao <?=$_SESSION['name']?> ecco i tuoi eventi</h2>
+    <form action="../controller/logout_controller.php">
+      <button type="submit" class="btn">LogOut</button>
+    </form>
 </body>
 </html>

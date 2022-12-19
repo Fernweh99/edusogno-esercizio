@@ -10,7 +10,7 @@
         echo "Error creating table: " . $conn->error;
     }
     // Validate and redirect if is Log in
-    if ($_SESSION['log']) {
+    if (isset($_SESSION['log']) && $_SESSION['log']) {
         header('Location: pages/personal.php');
     } else {
         header('Location: pages/login.php');

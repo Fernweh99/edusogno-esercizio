@@ -1,3 +1,9 @@
+<?php
+session_start();
+ if (isset($_SESSION['log']) && $_SESSION['log']) {
+   header ('Location: personal.php');
+ }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
