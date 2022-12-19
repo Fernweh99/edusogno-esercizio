@@ -16,7 +16,7 @@
   ?>
   <h2 class="title-page">Hai già un account?</h2>
   <div class="box mt1">
-    <form action="">
+    <form action="../controller/login_controller.php" method="POST">
       <div class="d-col">
         <label for="email">Inserisci l'e-mail</label>
         <input type="text" class="base-input mt1" name="email" id="email" placeholder="name@example.com">

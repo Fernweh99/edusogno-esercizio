@@ -1,6 +1,20 @@
 <?php
     session_start();
     include 'db_conn.php';
+    // Migrate tables
+    $sql = file_get_contents('assets/db/Migrations.sql');
+
+    if ($conn->multi_query($sql) === TRUE) {
+        echo "Table MyGuests created successfully";
+    } else {
+        echo "Error creating table: " . $conn->error;
+    }
+    // Validate and redirect if is Log in
+    if ($_SESSION['log']) {
+        header('Location: pages/personal.php');
+    } else {
+        header('Location: pages/login.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,10 +31,7 @@
 </head>
 
 <body>
- <?php
-    header("Location: pages/login.php");
-    exit();
- ?>
+
 </body>
 
 </html>
