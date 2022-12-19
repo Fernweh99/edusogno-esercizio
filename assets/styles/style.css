@@ -1,0 +1,102 @@
+/* Var */
+:root {
+  --main-bg-color: #D9E5F3;
+  --secondary-color: #134077;
+  --prm-btn-color: #0057FF;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--main-bg-color);
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Generics class */
+.title-page {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--secondary-color);
+  text-align: center;
+}
+.base-input {
+  border: 0;
+  font-size: 18px;
+  width: 100%;
+  padding: 5px 0;
+  border-bottom: 1px solid black;
+}
+.btn {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: var(--prm-btn-color);
+  border-radius: 11px;
+  padding: 12px 0;
+}
+
+/* Utils */
+.mt1 {
+  margin-top: 10px !important;
+}
+.mt2 {
+  margin-top: 25px !important;
+}
+.mt3 {
+  margin-top: 45px !important;
+}
+.d-col {
+  display: flex;
+  flex-direction: column;
+}
+.p-rel {
+  position: relative;
+}
+
+/* Header */
+header {
+  padding-left: 30px;
+  height: 90px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+  margin-bottom: 40px;
+  box-shadow: 1px 2px 4px rgba(75, 141, 255, 0.668);
+}
+
+.logo{
+  height: 50px;
+}
+
+/* Box Form */
+.box {
+  border: 1px solid var(--secondary-color);
+  margin: 0 auto;
+  border-radius: 19px;
+  padding: 40px 30px;
+  width: 662px;
+  background: #FFFFFF;
+}
+label {
+  font-size: 13px;
+  font-weight: 700;
+}
+.footer-text-box {
+  font-size: 13px;
+  text-align: center;
+}
+.link-box {
+  color: black;
+  font-weight: 700;
+}
+.eye {
+  position: absolute;
+  color: var(--prm-btn-color);
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -25%);
+}
