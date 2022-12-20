@@ -19,6 +19,7 @@ else if (empty($pwd)) {
   header('Location: ../pages/login.php?error=Password is required');
   exit();
 }
+$pwd = hash('sha256', $pwd);
 
 $sql = "SELECT * FROM utenti WHERE email = '$email' AND password = '$pwd'";
 

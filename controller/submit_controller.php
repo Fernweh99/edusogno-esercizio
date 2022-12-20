@@ -54,6 +54,8 @@ else if (mysqli_num_rows($result) > 0){
   exit();
 }
 
+$password = hash('sha256', $password);
+
 $add_user = "INSERT INTO utenti (nome, cognome, email, password) VALUES('$name', '$surname', '$email', '$password')";
 
 if ($conn->query($add_user) === TRUE) {
