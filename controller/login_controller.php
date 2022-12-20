@@ -12,10 +12,12 @@ $email = validate($_POST['email']);
 $pwd = validate($_POST['password']);
 
 if (empty($email)) {
-  header('Location: ../pages/login.php?error=Email Is Required');
+  header('Location: ../pages/login.php?error=Email is required');
+  exit();
 }
 else if (empty($pwd)) {
-  header('Location: ../pages/login.php?error=Password Is Required');
+  header('Location: ../pages/login.php?error=Password is required');
+  exit();
 }
 
 $sql = "SELECT * FROM utenti WHERE email = '$email' AND password = '$pwd'";

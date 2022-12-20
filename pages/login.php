@@ -31,6 +31,7 @@ session_start();
           <input type="password" class="base-input mt1" name="password" id="password" placeholder="Scrivila qui">
           <i class="fa-solid fa-eye eye"></i>
         </div>
+        <p class="error mt1"><?php if(isset($_GET['error'])) echo $_GET['error'] ?></p>
         <button type="submit" class="btn mt3">ACCEDI</button>
       </div>
     </form>

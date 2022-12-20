@@ -36,6 +36,12 @@ body {
   background-color: var(--prm-btn-color);
   border-radius: 11px;
   padding: 12px 0;
+  cursor: pointer;
+}
+.error {
+  font-size: 15px;
+  color: red;
+  text-align: center;
 }
 
 /* Utils */
