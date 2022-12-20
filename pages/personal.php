@@ -20,9 +20,32 @@
   <?php
   include '../includes/header.php';
   ?>
-    <h2 class="title-page">Ciao <?=$_SESSION['name']?> ecco i tuoi eventi</h2>
-    <form action="../controller/logout_controller.php">
-      <button type="submit" class="btn">LogOut</button>
-    </form>
+  <h2 class="title-page">Ciao <?=$_SESSION['name']?> ecco i tuoi eventi</h2>
+  <div class="container-box mt1">
+    <div class="box-sm mt1">
+      <h3 class="title-ev">Esegui logout</h3>
+      <form action="../controller/logout_controller.php" method="POST">
+        <div class="d-col">
+          <button type="submit" class="btn mt2">Logout</button>
+        </div>
+      </form>
+    </div>
+    <div class="box-sm mt1">
+    <h3 class="title-ev">Nome Evento</h3>
+      <form method="POST">
+        <div class="d-col">
+          <button type="submit" class="btn mt2">Join</button>
+        </div>
+      </form>
+    </div>
+    <div class="box-sm mt1">
+    <h3 class="title-ev">Nome Evento</h3>
+      <form method="POST">
+        <div class="d-col">
+          <button type="submit" class="btn mt2">Join</button>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
