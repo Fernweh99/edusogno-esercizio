@@ -7,9 +7,9 @@ class User
   private $email;
   private $password;
 
-  function __construct($nome, $surname, $email, $password) {
-    $this->name = $name;
-    $this->surname = $cognome;
+  function __construct($nome, $cognome, $email, $password) {
+    $this->nome = $nome;
+    $this->cognome = $cognome;
     $this->email = $email;
     $this->password = $password;
   }
@@ -26,6 +26,10 @@ class User
     return $this->email;
   }
 
+  function getPassword() {
+    return $this->password;
+  }
+
   // Validate data
   function validate($data) {
     $data = trim($data);
@@ -33,7 +37,7 @@ class User
   
   function validateString($data) {
     $error = true;
-    if ($data == preg_replace("/[^a-zA-Z]+/", "", $data)) {
+    if ($data == preg_replace("/[^a-zA-Z]+/", " ", $data)) {
       $error = false;
     }
     return $error;
@@ -42,14 +46,6 @@ class User
   function validateEmail($email) {
     $error = true;
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      $error = false;
-    }
-    return $error;
-  }
-
-  function validatePassword($password, $repeatPassword) {
-    $error = true;
-    if ($password == $repeatPassword) {
       $error = false;
     }
     return $error;
