@@ -3,13 +3,16 @@
     include 'db_conn.php';
     // Migrate tables
     $sql = file_get_contents('assets/db/Migrations.sql');
-
-    if ($conn->multi_query($sql) === TRUE) {
-        echo "Table MyGuests created successfully";
-    } else {
-        echo "Error creating table: " . $conn->error;
+    $sql_verification = "SELECT * FROM utenti";
+    if ($conn->query($sql_verification) === FALSE){
+        if ($conn->multi_query($sql) === TRUE) {
+            echo "Tables created successfully";
+        } else {
+            echo "Error creating tables: " . $conn->error;
+        }
     }
-    // Validate and redirect if is Log in
+
+    //Validate and redirect if is Log in
     if (isset($_SESSION['log']) && $_SESSION['log']) {
         header('Location: pages/personal.php');
     } else {
