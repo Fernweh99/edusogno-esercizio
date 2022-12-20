@@ -79,13 +79,28 @@ header {
 }
 
 /* Box Form */
-.box {
+.container-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+.box,.box-sm{
   border: 1px solid var(--secondary-color);
   margin: 0 auto;
   border-radius: 19px;
   padding: 40px 30px;
-  width: 662px;
   background: #FFFFFF;
+}
+.box-sm {
+  width: 340px;
+}
+.box {
+  width: 662px;
+}
+.title-ev {
+  font-size: 25px;
+  font-weight: 700;
 }
 label {
   font-size: 13px;
@@ -99,7 +114,8 @@ label {
   color: black;
   font-weight: 700;
 }
-.eye {
+#btn-eye {
+  cursor: pointer;
   position: absolute;
   color: var(--prm-btn-color);
   right: 0;

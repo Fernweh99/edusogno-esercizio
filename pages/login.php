@@ -14,6 +14,8 @@ session_start();
   <script src="https://kit.fontawesome.com/7ff5ce46be.js" crossorigin="anonymous"></script>
   <!-- Style -->
   <link rel="stylesheet" href="../assets/styles/style.css?v=<?php echo time(); ?>">
+  <!-- JS -->
+  <script src="../assets/js/showPwd.js" defer></script>
   <title>Login</title>
 </head>
 <body>
@@ -29,7 +31,7 @@ session_start();
         <label for="password" class="mt3">Inserisci la password</label>
         <div class="p-rel">
           <input type="password" class="base-input mt1" name="password" id="password" placeholder="Scrivila qui">
-          <i class="fa-solid fa-eye eye"></i>
+          <i class="fa-solid fa-eye" id="btn-eye"></i>
         </div>
         <p class="error mt1"><?php if(isset($_GET['error'])) echo $_GET['error'] ?></p>
         <button type="submit" class="btn mt3">ACCEDI</button>
