@@ -39,7 +39,7 @@ session_start();
         <button type="submit" class="btn mt3">Registrati</button>
       </div>
     </form>
-    <p class="footer-text-box mt3">Hai già un account? <a class="link-box" href="#">Accedi</a></p>
+    <p class="footer-text-box mt3">Hai già un account? <a class="link-box" href="login.php">Accedi</a></p>
   </div>
 </body>
 </html>

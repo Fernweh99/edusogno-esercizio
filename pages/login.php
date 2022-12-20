@@ -25,7 +25,7 @@ session_start();
     <form action="../controller/login_controller.php" method="POST">
       <div class="d-col">
         <label for="email">Inserisci l'e-mail</label>
-        <input type="text" class="base-input mt1" name="email" id="email" placeholder="name@example.com">
+        <input type="email" class="base-input mt1" name="email" id="email" placeholder="name@example.com">
         <label for="password" class="mt3">Inserisci la password</label>
         <div class="p-rel">
           <input type="password" class="base-input mt1" name="password" id="password" placeholder="Scrivila qui">
@@ -35,7 +35,7 @@ session_start();
         <button type="submit" class="btn mt3">ACCEDI</button>
       </div>
     </form>
-    <p class="footer-text-box mt3">Non hai ancora un profilo? <a class="link-box" href="#">Registrati</a></p>
+    <p class="footer-text-box mt3">Non hai ancora un profilo? <a class="link-box" href="submit.php">Registrati</a></p>
   </div>
 </body>
 </html>
