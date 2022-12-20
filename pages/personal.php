@@ -13,8 +13,8 @@
   <!-- FontAw -->
   <script src="https://kit.fontawesome.com/7ff5ce46be.js" crossorigin="anonymous"></script>
   <!-- Style -->
-  <link rel="stylesheet" href="../assets/styles/style.css">
-  <title>Login</title>
+  <link rel="stylesheet" href="../assets/styles/style.css?v=<?php echo time(); ?>">
+  <title>Personal Page</title>
 </head>
 <body>
   <?php

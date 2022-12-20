@@ -13,7 +13,7 @@ session_start();
   <!-- FontAw -->
   <script src="https://kit.fontawesome.com/7ff5ce46be.js" crossorigin="anonymous"></script>
   <!-- Style -->
-  <link rel="stylesheet" href="../assets/styles/style.css">
+  <link rel="stylesheet" href="../assets/styles/style.css?v=<?php echo time(); ?>">
   <title>Login</title>
 </head>
 <body>
